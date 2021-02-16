@@ -11,7 +11,7 @@ abort() {
 }
 
 busybox_exist() {
-  if [ "$(which -a busybox)" = "" ]; then
+  if [ ! "$(which -a busybox)" = "" ]; then
     return 0
   else
     return 1
